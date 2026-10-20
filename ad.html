@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>SOUQNA — Open advertisement</title>
+  <style>
+    body { font: 16px system-ui, -apple-system, sans-serif; background: #f6f8fc; color: #082a5e; display: grid; place-items: center; min-height: 100vh; margin: 0; text-align: center; }
+    main { padding: 28px; }
+    a { color: #1466c3; font-weight: 700; }
+  </style>
+  <script>
+    // Legacy share links used ad.html. Preserve the exact ad ID when
+    // sending visitors to the Expo web export's ad-details.html route.
+    window.location.replace('ad-details.html' + window.location.search + window.location.hash);
+  </script>
+</head>
+<body>
+  <main>
+    <h1>SOUQNA</h1>
+    <p>Opening your advertisement…</p>
+    <p><a id="ad-link" href="ad-details.html">Open advertisement</a></p>
+    <script>
+      document.getElementById('ad-link').href =
+        'ad-details.html' + window.location.search + window.location.hash;
+    </script>
+  </main>
+</body>
+</html>
